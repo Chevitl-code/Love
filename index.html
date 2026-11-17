@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Una sorpresa para Escarlet ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="ambient" id="ambient"></div>
+
+    <!-- =================================
+         PANTALLA DEL FORMULARIO
+    ================================== -->
+
+    <main id="formScreen" class="screen">
+
+        <section class="paper">
+
+            <p class="eyebrow">Esta es una pequeña sorpreshita para ustedd</p>
+
+            <h1>Jeloush Princeshita Escarlata ♡</h1>
+
+            <div class="divider"></div>
+
+            <p class="subtitle">
+                Antes de descubrir lo que preparé,
+                necesito comprobar que eres tú.
+                Responde estas cuatro preguntitas
+                nu creo que nu se las sepas jiji
+            </p>
+
+            <form id="identityForm">
+
+                <label>
+                    Nombre:
+                    <input id="firstName" type="text" placeholder="Tu nombre" required>
+                </label>
+
+                <label>
+                    Apellido:
+                    <input id="lastName" type="text" placeholder="Tu apellido" required>
+                </label>
+
+                <label>
+                    Edad:
+                    <input id="age" type="number" placeholder="Tu edad" required>
+                </label>
+                
+                <label>
+                    ¿De quién sera que está enamorada??????????
+                    <input id="crush" type="text" placeholder="Su nombre" required>
+                </label>
+
+
+                <button class="main-button" type="submit">
+                    Descubra mis 4 sorpreshitash ♡
+                </button>
+
+                <p id="formMessage" class="message"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         PANTALLA DE LOS SOBRES
+    ================================== -->
+
+    <main id="treasureScreen" class="hidden">
+
+        <header class="page-heading">
+
+            <p class="eyebrow">Algo preparado especialmente para ti</p>
+
+            <h1>Cuatro pequeños secretos</h1>
+
+            <p class="subtitle">
+                Cada sobre guarda algo diferente.
+                Ábrelos cuando quieras... ♡
+            </p>
+
+            <div class="divider"></div>
+
+        </header>
+
+
+        <section class="envelope-grid">
+
+            <!-- SOBRE 1: MÚSICA -->
+
+            <button class="envelope-card" data-modal="musicModal">
+
+                <div class="envelope-art">
+                    <div class="env-back"></div>
+                    <div class="env-flap"></div>
+                    <div class="env-front"></div>
+                    <div class="seal">♪</div>
+                </div>
+
+                <h3>Cartita de music</h3>
+                <p>Un pequeño momento para escuchar</p>
+                <p class="open-hint">✦ Toca para abrir ✦</p>
+
+            </button>
+
+
+            <!-- SOBRE 2: FOTOGRAFÍAS -->
+
+            <button class="envelope-card" data-modal="photosModal">
+
+                <div class="envelope-art">
+                    <div class="env-back"></div>
+                    <div class="env-flap"></div>
+                    <div class="env-front"></div>
+                    <div class="seal">♡</div>
+                </div>
+
+                <h3>Recuerdos</h3>
+                <p>Fotografías y momentos especiales</p>
+                <p class="open-hint">✦ Toca para abrir ✦</p>
+
+            </button>
+
+
+            <!-- SOBRE 3: CARTA -->
+
+            <button class="envelope-card" data-modal="letterModal">
+
+                <div class="envelope-art">
+                    <div class="env-back"></div>
+                    <div class="env-flap"></div>
+                    <div class="env-front"></div>
+                    <div class="seal">✉</div>
+                </div>
+
+                <h3>Una cartita para Usted</h3>
+                <p>Unas palabras para usted</p>
+                <p class="open-hint">✦ Toca para abrir ✦</p>
+
+            </button>
+
+
+            <!-- SOBRE 4: RULETA -->
+
+            <button class="envelope-card" data-modal="wheelModal">
+
+                <div class="envelope-art">
+                    <div class="env-back"></div>
+                    <div class="env-flap"></div>
+                    <div class="env-front"></div>
+                    <div class="seal">🎰</div>
+                </div>
+
+                <h3>Un premio</h3>
+                <p>Deja que la suerte decida
+                    su proxima apuestita jiji
+                    aunque tdas menos 1 son faciles
+                </p>
+                <p class="open-hint">✦ Toca para abrir ✦</p>
+
+            </button>
+
+        </section>
+
+        <p class="footer-note">Hecho con cariño y amor 
+            xq la amo ya kasi un 30% ♡</p>
+
+    </main>
+
+
+    <!-- =================================
+         MODAL 1: MÚSICA
+    ================================== -->
+
+    <section class="modal hidden" id="musicModal">
+
+        <div class="modal-content">
+
+            <button class="close">×</button>
+
+            <p class="eyebrow">Sobre número uno</p>
+
+            <h2>Una canción para ti</h2>
+
+            <p class="modal-subtitle">
+                A veces una canción puede decir mucho. ♡
+            </p>
+
+            
+<
+<div class="music-player">
+
+    <!-- REPRODUCTOR REAL DE SPOTIFY -->
+    <div id="spotifyEmbed"></div>
+
+    <!-- DEDICATORIA -->
+    <div class="dedication">
+
+        <h3 class="dedication-title">
+            Unas palabras para ti ♡
+        </h3>
+
+        <div class="divider"></div>
+
+        <p>
+            A pesar de la distancia, de los momentos difíciles 
+            que hemos vivido
+            y de todo lo que hemos tenido que soportar y luchar,
+            hay algo que quiero que recuerdes
+        </p>
+
+        <p>
+            Hemos pasado por momentos en los que quizás
+            no entendíamos muchas cosas, momentos que nos
+            hicieron dudar y que también nos hicieron aprender
+            aunque quizas no sabemos el motivo o el que aprendimos.
+            Pero quiero que sepas que no tenemos que cargar
+            con todo el peso
+            y que siempre podemos encontrar fortaleza en mi pero mas
+            en Dios.
+        </p>
+
+        <p>
+            Dios sigue estando con nosotros. Que nunca nos
+            falte la fe, la paciencia y las esperanzas de
+            saber que podemos poner nuestro camino en sus manos.
+        </p>
+
+        <p>
+            Quiero que esta canción te recuerde que,
+            incluso después de los días difíciles,
+            siempre podemos encontrar paz cuando dejamos
+            que Dios guíe nuestros pasos.
+        </p>
+
+        <p>
+            Se que no soy lo mejor para usted y hay cosas que le
+            gustaria volver a hacer lo mas pronto posible, pero
+            quiero que sepa que estoy haciendo todo lo posible
+            para que ese niño que la amaba tantisisisimo vuelva
+            y se quede por siempre, se que es dificil tener paciencia
+            pero Dios nos ayuda y nos dara la fuerza para seguir adelante y no rendirnos.
+        </p>
+
+        <p class="dedication-signature">
+            Con mucho cariño su monito ♡
+        </p>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         MODAL 2: FOTOGRAFÍAS
+    ================================== -->
+
+    <section class="modal hidden" id="photosModal">
+
+        <div class="modal-content">
+
+            <button class="close">×</button>
+
+            <p class="eyebrow">Sobre número dos</p>
+
+            <h2>Pequeños recuerdos</h2>
+
+            <p class="modal-subtitle">
+                Algunas imágenes para guardar con cariño.
+            </p>
+
+            <div class="gallery" id="photoGallery"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         MODAL 3: CARTA
+    ================================== -->
+
+    <section class="modal hidden" id="letterModal">
+
+        <div class="modal-content">
+
+            <button class="close">×</button>
+
+            <p class="eyebrow">Sobre número tres</p>
+
+            <h2>Para Escarlet ♡</h2>
+
+            <p class="modal-subtitle">
+                Una carta escrita especialmente para ti.
+            </p>
+
+            <article class="letter">
+
+                <p>Querida Escarlet:</p>
+
+                <p id="letterParagraph1"></p>
+
+                <p id="letterParagraph2"></p>
+
+                <p id="letterParagraph3"></p>
+
+                <p class="signature" id="signature"></p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         MODAL 4: RULETA
+    ================================== -->
+
+    <section class="modal hidden" id="wheelModal">
+
+        <div class="modal-content">
+
+            <button class="close">×</button>
+
+            <p class="eyebrow">Ruleta de Premios, solo tiene 3 premios</p>
+
+            <h2>La ruleta de los premios</h2>
+
+            <p class="modal-subtitle">
+                ¡Gíre y descubre qué premio le toca, son 3 dias, 3 premios!
+            </p>
+
+            <div class="wheel-area">
+
+                <div class="wheel-shell">
+
+                    <div class="pointer"></div>
+
+                    <canvas id="wheel" width="700" height="700"></canvas>
+
+                </div>
+
+                <button class="main-button" id="spinButton">
+                    Gire la ruleta ✧
+                </button>
+
+                <p id="wheelResult"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
